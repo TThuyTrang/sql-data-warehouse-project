@@ -1,150 +1,84 @@
-# Data Warehouse and Analytics Project
+# 🚀 SQL Data Warehouse Project
 
-## Overview
-
-This project demonstrates the design and implementation of a modern Data Warehouse using SQL Server. The solution integrates data from multiple business systems (CRM and ERP), applies data quality transformations, and delivers analytics-ready datasets for reporting and decision-making.
-
-The project follows the Medallion Architecture approach with Bronze, Silver, and Gold layers to ensure scalability, maintainability, and clear separation of responsibilities throughout the data pipeline.
+A modern Data Warehouse built with SQL Server following the Medallion Architecture (Bronze, Silver, Gold). The project demonstrates end-to-end ETL development, data cleansing, dimensional modeling, and analytical data preparation.
 
 ---
 
-## Project Objectives
+## 📌 Project Overview
 
-* Build a centralized Data Warehouse from multiple source systems.
-* Develop ETL pipelines to ingest, cleanse, and transform data.
-* Create a dimensional model optimized for analytical workloads.
-* Generate business insights related to customers, products, and sales performance.
-* Demonstrate Data Engineering and Data Analytics best practices.
+This project consolidates CRM and ERP data into a centralized Data Warehouse for analytics and reporting.
 
----
+### Key Objectives
 
-## Data Architecture
-
-The project adopts the Medallion Architecture consisting of three layers:
-
-### Bronze Layer
-
-Stores raw data imported directly from source CSV files without modifications.
-
-Responsibilities:
-
-* Data ingestion
-* Raw data preservation
-* Source system replication
-
-### Silver Layer
-
-Performs data cleansing, validation, standardization, and enrichment.
-
-Responsibilities:
-
-* Removing duplicates
-* Handling missing values
-* Standardizing formats
-* Data quality validation
-* Business rule implementation
-
-### Gold Layer
-
-Provides business-ready analytical datasets using a Star Schema design.
-
-Responsibilities:
-
-* Fact and dimension modeling
-* Query optimization
-* Reporting and dashboard support
+* Import data from multiple source systems
+* Clean and standardize raw data
+* Build ETL pipelines using SQL Server
+* Design a Star Schema model
+* Create analytics-ready datasets
 
 ---
 
-## Data Sources
+## 🏗️ Data Architecture
 
-The warehouse integrates data from two operational systems:
+The warehouse follows the Medallion Architecture:
 
-### CRM System
+### 🥉 Bronze Layer
 
-Contains:
+* Store raw data from CSV files
+* Preserve source data integrity
+* Support auditing and troubleshooting
 
-* Customer information
-* Product information
-* Sales transactions
+### 🥈 Silver Layer
 
-### ERP System
+* Remove duplicates
+* Handle missing values
+* Standardize formats
+* Validate and transform data
 
-Contains:
+### 🥇 Gold Layer
 
-* Customer demographics
-* Product categories
-* Location information
-
-Data is provided as CSV files and loaded into SQL Server.
-
----
-
-## ETL Process
-
-### Extract
-
-* Import CSV files into Bronze tables.
-
-### Transform
-
-* Clean invalid records.
-* Remove duplicates.
-* Standardize customer and product attributes.
-* Validate sales calculations.
-* Normalize categorical fields.
-
-### Load
-
-* Load transformed data into Silver tables.
-* Build analytical models in Gold tables.
+* Build dimension tables
+* Build fact tables
+* Deliver business-ready analytical data
 
 ---
 
-## Data Model
+## 🔄 ETL Workflow
 
-The Gold layer follows a Star Schema design consisting of:
+```text
+CSV Files
+    ↓
+Bronze Layer
+    ↓
+Data Cleaning & Transformation
+    ↓
+Silver Layer
+    ↓
+Dimensional Modeling
+    ↓
+Gold Layer
+```
+
+---
+
+## 📊 Data Model
+
+### Dimension Tables
+
+* Dim Customers
+* Dim Products
 
 ### Fact Table
 
 * Fact Sales
 
-### Dimension Tables
-
-* Dim Customer
-* Dim Product
-
-The model is designed to support fast analytical queries and reporting workloads.
+The final model follows a Star Schema design optimized for reporting and analytics.
 
 ---
 
-## Analytics & Reporting
+## 🛠️ Technologies Used
 
-The warehouse enables analysis of:
-
-### Customer Analysis
-
-* Customer segmentation
-* Customer purchasing behavior
-* Top customers by revenue
-
-### Product Analysis
-
-* Best-selling products
-* Product category performance
-* Revenue contribution by product
-
-### Sales Analysis
-
-* Revenue trends
-* Order volume analysis
-* Sales performance over time
-
----
-
-## Technologies Used
-
-* SQL Server Express
+* Microsoft SQL Server
 * SQL Server Management Studio (SSMS)
 * T-SQL
 * Draw.io
@@ -152,58 +86,42 @@ The warehouse enables analysis of:
 
 ---
 
-## Repository Structure
+## 📂 Project Structure
 
 ```text
-data-warehouse-project/
+sql-data-warehouse-project/
 │
 ├── datasets/
-│
 ├── docs/
-│   ├── data_architecture.drawio
-│   ├── data_flow.drawio
-│   ├── data_models.drawio
-│   ├── data_catalog.md
-│   └── naming_conventions.md
-│
 ├── scripts/
 │   ├── bronze/
 │   ├── silver/
 │   └── gold/
-│
-├── tests/
-│
 ├── README.md
-├── LICENSE
-└── .gitignore
+└── LICENSE
 ```
 
 ---
 
-## Key Skills Demonstrated
+## 🎯 Skills Demonstrated
 
-* Data Warehouse Design
-* Medallion Architecture
+* Data Warehousing
 * ETL Development
+* Data Cleaning
 * SQL Programming
-* Data Cleaning and Validation
-* Data Modeling
 * Dimensional Modeling
-* Business Analytics
-* Data Engineering Best Practices
+* Star Schema Design
+* Data Engineering
 
 ---
 
-## Future Improvements
+## 📈 Project Outcomes
 
-* Implement incremental loading.
-* Add data quality monitoring.
-* Automate pipeline scheduling.
-* Integrate Power BI dashboards.
-* Deploy to Azure Data Factory and Azure SQL Database.
+* Successfully integrated CRM and ERP datasets
+* Built a complete Medallion Architecture pipeline
+* Implemented data quality checks and transformations
+* Developed a Star Schema for analytical workloads
+* Produced business-ready datasets for reporting
 
 ---
 
-## Author
-
-This project was developed as a portfolio project to demonstrate practical Data Engineering and Analytics skills using SQL Server and modern data warehousing techniques.
