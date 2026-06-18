@@ -1,127 +1,131 @@
-# 🚀 SQL Data Warehouse Project
+# 🚀 SQL Data Warehouse & Analytics Project
 
-A modern Data Warehouse built with SQL Server following the Medallion Architecture (Bronze, Silver, Gold). The project demonstrates end-to-end ETL development, data cleansing, dimensional modeling, and analytical data preparation.
+An end-to-end Data Warehouse solution built with SQL Server, covering data ingestion, transformation, dimensional modeling, and business analytics.
 
----
-
-## 📌 Project Overview
-
-This project consolidates CRM and ERP data into a centralized Data Warehouse for analytics and reporting.
-
-### Key Objectives
-
-* Import data from multiple source systems
-* Clean and standardize raw data
-* Build ETL pipelines using SQL Server
-* Design a Star Schema model
-* Create analytics-ready datasets
+This project demonstrates practical Data Engineering concepts including ETL development, Medallion Architecture, Star Schema modeling, and analytical reporting.
 
 ---
 
-## 🏗️ Data Architecture
+## 🎯 Project Goals
 
-The warehouse follows the Medallion Architecture:
-
-### 🥉 Bronze Layer
-
-* Store raw data from CSV files
-* Preserve source data integrity
-* Support auditing and troubleshooting
-
-### 🥈 Silver Layer
-
-* Remove duplicates
-* Handle missing values
-* Standardize formats
-* Validate and transform data
-
-### 🥇 Gold Layer
-
-* Build dimension tables
-* Build fact tables
-* Deliver business-ready analytical data
+* Consolidate CRM and ERP data into a centralized Data Warehouse
+* Improve data quality through cleansing and transformation
+* Build a scalable analytical data model
+* Generate business-ready datasets for reporting and decision-making
 
 ---
 
-## 🔄 ETL Workflow
+## 🏗️ Architecture
+
+The project follows the Medallion Architecture approach:
 
 ```text
-CSV Files
-    ↓
-Bronze Layer
-    ↓
-Data Cleaning & Transformation
-    ↓
-Silver Layer
-    ↓
-Dimensional Modeling
-    ↓
-Gold Layer
+CRM & ERP Data
+        ↓
+     Bronze
+   (Raw Data)
+        ↓
+     Silver
+(Clean & Transform)
+        ↓
+      Gold
+(Star Schema)
+        ↓
+   Analytics
 ```
 
 ---
 
-## 📊 Data Model
+## ⚙️ What I Built
 
-### Dimension Tables
+### 🥉 Bronze Layer
 
-* Dim Customers
-* Dim Products
+* Loaded raw CSV files into SQL Server using BULK INSERT
+* Preserved source data for traceability and auditing
 
-### Fact Table
+### 🥈 Silver Layer
 
-* Fact Sales
+* Removed duplicate records
+* Handled missing and invalid values
+* Standardized customer, product, and sales data
+* Applied business validation rules
+* Integrated CRM and ERP datasets
 
-The final model follows a Star Schema design optimized for reporting and analytics.
+### 🥇 Gold Layer
+
+Designed a Star Schema consisting of:
+
+#### Dimension Tables
+
+* dim_customers
+* dim_products
+
+#### Fact Table
+
+* fact_sales
+
+The final model is optimized for analytical queries and reporting.
 
 ---
 
-## 🛠️ Technologies Used
+## 📊 Analytics
 
-* Microsoft SQL Server
-* SQL Server Management Studio (SSMS)
-* T-SQL
-* Draw.io
-* Git & GitHub
+Performed SQL-based analysis including:
+
+* Customer Segmentation
+* Product Performance Analysis
+* Sales Trend Analysis
+* Ranking Analysis
+* Time-Series Analysis
+* Performance Benchmarking
+* Business Reporting
+
+Generated curated datasets ready for BI dashboards and business intelligence applications.
 
 ---
 
-## 📂 Project Structure
+## 📂 Repository Structure
 
 ```text
 sql-data-warehouse-project/
 │
 ├── datasets/
+│   ├── raw/
+│   │   ├── crm/
+│   │   └── erp/
+│   └── curated/
+│
 ├── docs/
 ├── scripts/
 │   ├── bronze/
 │   ├── silver/
 │   └── gold/
-├── README.md
-└── LICENSE
+│
+├── analytics/
+└── README.md
 ```
 
 ---
 
-## 🎯 Skills Demonstrated
+## 🛠️ Technologies
 
-* Data Warehousing
-* ETL Development
-* Data Cleaning
-* SQL Programming
-* Dimensional Modeling
-* Star Schema Design
-* Data Engineering
+* SQL Server
+* T-SQL
+* SSMS
+* Draw.io
+* Git & GitHub
 
 ---
 
-## 📈 Project Outcomes
+## 🎓 Skills Demonstrated
 
-* Successfully integrated CRM and ERP datasets
-* Built a complete Medallion Architecture pipeline
-* Implemented data quality checks and transformations
-* Developed a Star Schema for analytical workloads
-* Produced business-ready datasets for reporting
+* Data Warehousing
+* ETL Pipeline Development
+* Data Cleaning & Validation
+* Data Modeling
+* Star Schema Design
+* SQL Analytics
+* Business Intelligence Foundations
 
 ---
 
